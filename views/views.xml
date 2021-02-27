@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="sms_login.list">
+      <field name="name">sms_login list</field>
+      <field name="model">sms_login.sms_login</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="sms_login.action_window">
+      <field name="name">sms_login window</field>
+      <field name="res_model">sms_login.sms_login</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="sms_login.action_server">
+      <field name="name">sms_login server</field>
+      <field name="model_id" ref="model_sms_login_sms_login"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="sms_login" id="sms_login.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="sms_login.menu_1" parent="sms_login.menu_root"/>
+    <menuitem name="Menu 2" id="sms_login.menu_2" parent="sms_login.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="sms_login.menu_1_list" parent="sms_login.menu_1"
+              action="sms_login.action_window"/>
+    <menuitem name="Server to list" id="sms_login" parent="sms_login.menu_2"
+              action="sms_login.action_server"/>
+-->
+  </data>
+</odoo>
